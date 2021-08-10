@@ -22,3 +22,7 @@ function addItem(parent) {
   // - append item EL as parent child
   parent.appendChild(item);
 }
+
+mainAddBtn.addEventListener("click", () => {
+  addItem(document.querySelector(".item-list"));
+});
