@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.buttons {
+  margin: 1rem;
+}
+
+.item-el {
+  border: 4px solid cornflowerblue;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
