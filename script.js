@@ -27,6 +27,14 @@ function addItem(parent) {
     .addEventListener("click", function () {
       addItem(this.parentNode);
     });
+
+  items[items.length - 1]
+    .getElementsByClassName("remove-child-btn")[0]
+    .addEventListener("click", function () {
+      this.parentNode.remove();
+      //   this.parentNode.classList.add("hidden");
+      console.log(this.parentNode);
+    });
 }
 
 mainAddBtn.addEventListener("click", () => {
