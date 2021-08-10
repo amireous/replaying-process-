@@ -26,3 +26,12 @@ function addItem(parent) {
 mainAddBtn.addEventListener("click", () => {
   addItem(document.querySelector(".item-list"));
 });
+
+function mainRemoveAllItem(element) {
+  element.forEach((el) => el.remove());
+}
+
+mainRemoveBtn.addEventListener("click", () => {
+  itemID = 0;
+  mainRemoveAllItem(document.querySelectorAll(".item"));
+});
