@@ -11,7 +11,6 @@ function addItem(parent) {
   item.classList.add("item");
   item.id = itemID;
 
-  // 3- set a text and buttons for item EL
   item.innerHTML = `
   <div class = "item-el ">
    <p class = "item-text" >div id : <span>${item.id}</span> </p>
@@ -19,8 +18,15 @@ function addItem(parent) {
    <button class="remove-child-btn">remove child</button>
    </div>`;
 
-  // - append item EL as parent child
   parent.appendChild(item);
+
+  const items = item.parentNode.getElementsByClassName("item");
+  console.log(items[items.length - 1]);
+  items[items.length - 1]
+    .getElementsByClassName("add-child-btn")[0]
+    .addEventListener("click", function () {
+      addItem(this.parentNode);
+    });
 }
 
 mainAddBtn.addEventListener("click", () => {
